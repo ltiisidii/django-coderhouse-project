@@ -1,5 +1,10 @@
-# Instrucciones para ejecutar este proyecto
+# Pre Entrega
 
+## Equipo: 
+
+jonatanw-jhersvinq-jhanr
+
+### Instrucciones para ejecutar este proyecto# 
 - Clonar el proyecto y cambiar de rama
 ```bash
 git clone https://github.com/coder-live-class/django-coderhouse-project.git
