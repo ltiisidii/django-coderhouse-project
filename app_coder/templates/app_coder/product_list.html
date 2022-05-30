@@ -1,0 +1,56 @@
+{% extends "app_coder/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+<!-- Header -->
+<header class="masthead text-center text-white">
+    <div class="masthead-content">
+        <div class="container px-5">
+            <h1 class="masthead-heading mb-0">Lista de productos</h1>
+        </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+
+<!-- Content section 1-->
+        <section id="scroll">
+            <div class="container px-5">
+                <h2>Lista de Productos</h2>
+            <a class="card_custom" href="{% url 'app_coder:product-add' %}">Crear nuevo Producto</a>
+            <hr>
+            </hr>
+            <br><br>
+                <div class="row gx-5 align-items-center">
+                        <ul>
+                            {% for product in product_list %}
+                                <li> 
+                                    <p> {{ product.nameprod }} </p>
+                                    <p>
+                                        <a href=" {% url 'app_coder:product-detail' product.id %} ">
+                                            <i class="fa fa-eye" style="color: rgb(0, 0, 255);"> </i>
+                                        </a>
+                                        <a href=" {% url 'app_coder:product-update' product.id %} ">
+                                            <i class="fa fa-pencil" style="color: rgb(0, 0, 190);"> </i>
+                                        </a>
+                                        <a href=" {% url 'app_coder:product-delete' product.id %} "> 
+                                            <i class="fa fa-trash" style="color: rgb(0, 0, 100);"> </i>
+                                        </a>
+                                    </p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <p>
+                            <a class="btn btn-primary" href="{% url 'app_coder:Index' %}">Regresar a inicio</a>
+                        </p>
+                </div>
+                <br>
+            </div>
+        </section>
+
+{% endblock %}
