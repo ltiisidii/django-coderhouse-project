@@ -8,11 +8,9 @@ jonatanw-jhersvinq-jhanr
 
 - Clonar el proyecto y cambiar de rama
 ```bash
-git clone https://github.com/coder-live-class/django-coderhouse-project.git
+git clone https://github.com/ltiisidii/django-coderhouse-project.git
 
 cd django-coderhouse-project
-
-git checkout class_22
 
 ```
 
