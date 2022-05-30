@@ -84,7 +84,7 @@ def search(request):
     context_dict = dict() # evita que se rompa el search cuando se hace una busqueda vacia
     if request.GET['product_text_search']:
         print(request.__dict__)
-        search_param = request.GET['text_search']
+        search_param = request.GET['product_text_search']
         products = Product.objects.filter(nameprod__contains=search_param)
         context_dict = {
             'products': products
